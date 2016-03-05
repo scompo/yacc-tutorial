@@ -1,4 +1,4 @@
-calc: lex.yy.c y.tab.c
+calc: lex.yy.c calc.tab.c
 	gcc -g lex.yy.c calc.tab.c -o calc
 
 lex.yy.c: calc.tab.c calc.l
