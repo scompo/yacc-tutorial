@@ -22,9 +22,9 @@ void updateSymbolVal(char symbol, int val);
 
 line    :	assignment ';'						{;}
 				|	exit_command ';'					{exit(EXIT_SUCCESS);}
-				|	print exp ';'							{printf("Printing %d\n", $2);}
+				|	print exp ';'							{printf("Printing: %d\n", $2);}
 				|	line assignment ';'				{;}
-				|	line print exp ';'				{printf("Printing %d\n", $3);}
+				|	line print exp ';'				{printf("Printing: %d\n", $3);}
 				|	line exit_command ';'			{exit(EXIT_SUCCESS);}
         ;
 
